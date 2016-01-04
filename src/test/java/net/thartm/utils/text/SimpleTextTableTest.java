@@ -27,6 +27,6 @@ public class SimpleTextTableTest {
         simpleTextTable.addRow("Row 2 Value 1", "Row 2 Value 2", "Row 2 Value 3");
         simpleTextTable.addRow("Row 2 Value 1", "Row 2 Value 2", "Row 2 Value 3");
 
-        System.out.println(simpleTextTable.toString());
+        System.out.println(simpleTextTable.printFormatted());
     }
 }
