@@ -1,6 +1,7 @@
 package net.thartm.utils.text;
 
-import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * @author thomas.hartmann@netcentric.biz
@@ -8,18 +9,24 @@ import static org.junit.Assert.*;
  */
 public class SimpleTextTableTest {
 
-    @org.junit.Before
+    @Before
     public void setUp() throws Exception {
 
     }
 
-    @org.junit.Test
+    @Test
     public void testAddRow() throws Exception {
 
     }
 
-    @org.junit.Test
+    @Test
     public void testPrintFormatted() throws Exception {
+        SimpleTextTable simpleTextTable = new SimpleTextTable(true, true);
+        simpleTextTable.addRow("Column Header 1", "Column Header 2", "Column Header 1");
+        simpleTextTable.addRow("Row 1 Value 1", "Row 1 Value 2", "Row 1 Value 3");
+        simpleTextTable.addRow("Row 2 Value 1", "Row 2 Value 2", "Row 2 Value 3");
+        simpleTextTable.addRow("Row 2 Value 1", "Row 2 Value 2", "Row 2 Value 3");
 
+        System.out.println(simpleTextTable.toString());
     }
 }

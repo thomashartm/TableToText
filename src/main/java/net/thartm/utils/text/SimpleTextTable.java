@@ -11,8 +11,6 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class SimpleTextTable {
 
-    private static final String WHITESPACE = " ";
-
     private static final String DASH = "-";
 
     private int maxColumns = -1;
@@ -35,7 +33,6 @@ public class SimpleTextTable {
 
     public void addRow(final String... cols) {
         calculateColumnWidths(cols);
-
         rows.add(cols);
     }
 
@@ -67,8 +64,8 @@ public class SimpleTextTable {
 
                 final int columnWidth = maxColumnWidths[colNum];
 
-                sb.append(StringUtils.rightPad(value, columnWidth, WHITESPACE));
-                sb.append(WHITESPACE);
+                sb.append(StringUtils.rightPad(value, columnWidth, StringUtils.SPACE));
+                sb.append(StringUtils.SPACE);
 
             }
 
@@ -82,10 +79,10 @@ public class SimpleTextTable {
         if (showLineNumbers) {
 
             if (rowNum > 0) {
-                sb.append(StringUtils.rightPad(String.valueOf(rowNum), sizeForLineNumbers, WHITESPACE));
-                sb.append(WHITESPACE);
+                sb.append(StringUtils.rightPad(String.valueOf(rowNum), sizeForLineNumbers, StringUtils.SPACE));
+                sb.append(StringUtils.SPACE);
             }else {
-                sb.append(StringUtils.rightPad(WHITESPACE, sizeForLineNumbers, WHITESPACE));
+                sb.append(StringUtils.rightPad(StringUtils.SPACE, sizeForLineNumbers, StringUtils.SPACE));
             }
         }
     }
@@ -95,7 +92,7 @@ public class SimpleTextTable {
             for (int colNum = 0; colNum < row.length; colNum++) {
                 final int columnWidth = maxColumnWidths[colNum];
                 sb.append(StringUtils.rightPad(DASH, columnWidth, DASH));
-                sb.append(WHITESPACE);
+                sb.append(StringUtils.SPACE);
             }
             sb.append(StringUtils.LF);
         }
