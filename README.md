@@ -2,7 +2,7 @@
 The TextToTable library handles transformation of tables or tabluar information into a pretty printed text representation.
 
 #### How to render a simple table
-The following example render a simple table with header and lne numbers.
+The following example renders a very simple table with header and lne numbers.
 ``` java
 SimpleTextTable simpleTextTable = new SimpleTextTable(true, true);
 simpleTextTable.addRow("Column Header 1", "Column Header 2", "Column Header 1");
