@@ -10,7 +10,7 @@ import java.util.Optional;
  * @author thomas.hartmann@netcentric.biz
  * @since 01/2016
  */
-public class RowModelBackedTextTable {
+public class TextTable {
 
     private boolean showHeader;
 

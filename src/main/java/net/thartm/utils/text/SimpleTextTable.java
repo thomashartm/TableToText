@@ -13,6 +13,8 @@ public class SimpleTextTable {
 
     private static final String DASH = "-";
 
+    private boolean fixedMaxColumnWidth = false;
+
     private int maxColumns = -1;
 
     private int[] maxColumnWidths;
@@ -108,5 +110,21 @@ public class SimpleTextTable {
 
     public List<String[]> getRows() {
         return rows;
+    }
+
+    public void setShowHeader(final boolean showHeader) {
+        this.showHeader = showHeader;
+    }
+
+    public void setShowLineNumbers(final boolean showLineNumbers) {
+        this.showLineNumbers = showLineNumbers;
+    }
+
+    public void setFixedMaxColumnWidth(final int width){
+        if(width > -1){
+            this.fixedMaxColumnWidth = true;
+
+
+        }
     }
 }
